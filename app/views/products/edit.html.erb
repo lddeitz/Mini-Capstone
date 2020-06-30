@@ -1,0 +1,31 @@
+<h2>Edit A Product</h2>
+
+<form action="/products/ <%= @products.id %>" method="post">
+
+  <input type="hidden" name="_method" value="patch">
+
+  <div>
+    Name: <input type="text" name="name" value="<%= @products.name %>">
+  </div><br>
+
+  <div>
+    Price: <input type="number" name="price" value="<%= @products.price %>">
+  </div><br>
+
+  <div>
+    Description: <input type="textarea" name="description" value="<%= @products.description %>">
+  </div><br>
+
+  <div>
+    In Stock: <input type="textarea" name="in_stock" value="<%= @products.in_stock %>">
+  </div><br>
+
+  <div>
+    Supplier ID: <input type="textarea" name="supplier_id" value="<%= @products.supplier_id %>">
+  </div><br>
+
+  <div>
+    <button type="submit">Submit</button>
+  </div>
+
+</form>

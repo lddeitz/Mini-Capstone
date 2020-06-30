@@ -1,0 +1,19 @@
+<h1><%=@products.name%></h1>
+  <p>Name: <%= @products.name %></p>
+  <p>Price: <%= @products.price %></p>
+  <p>Description: <%= @products.description %></p>
+  <p>Supplier ID: <%= @products.supplier_id%></p>
+  <p>In Stock:<%= @products.in_stock%></p>
+
+<a href="/products/<%= @products.id%>/edit">Edit this product</a>
+
+<form action="/products/<%= @products.id %>" method="post">
+<input type="hidden" name="_method" value="delete"/>
+<button type="Submit">Delete</button>
+</form>
+
+
+
+
+
+<a href="/products">Return to Main Page</a>

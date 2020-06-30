@@ -1,0 +1,6 @@
+<h1><% @products.each do |product| %></h1>
+  <h2>Name: <%= product.name %></h2>
+  <h3>Price: <%= product.price %></h3>
+  <h5>Supplier ID: <%= product.supplier_id%></h5>
+  <a href="/products/<%= product.id %>%">Learn more about this product!</a>
+<h1><% end %></h1>
